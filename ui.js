@@ -7,7 +7,7 @@ class UI {
     this.currentHumidity = document.getElementById('current-humidity');
     this.currentPrecip = document.getElementById('current-precip');
     this.currentFeelslike = document.getElementById('current-feelslike');
-    this.currentWind = document.getElementById('current-wind');
+    this.localTime = document.getElementById('location-localtime');
   }
 
   paint(data) {
@@ -18,7 +18,7 @@ class UI {
     this.currentHumidity.textContent = `Humidity: ${data.current.humidity}`;
     this.currentPrecip.textContent = `Precipitation: ${data.current.precip_mm}`;
     this.currentFeelslike.textContent = `Feels like: ${data.current.feelslike_c}`;
-    this.currentWind.textContent = `Wind: ${data.current.wind_kph}`;
+    this.localTime.textContent = `Date & Time: ${data.location.localtime}`;
   }
 }
 
