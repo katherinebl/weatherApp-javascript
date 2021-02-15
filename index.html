@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
 
-    <script src="storaje.js"></script>
-    <script src="ui.js"></script>
-    <script src="weather.js"></script>
-    <script src="app.js"></script>
-  </body>
+  <main class="main">
+    <h1>WeatherJS App</h1>
+
+    <div class="container">
+      <h2>City</h2>
+      <h2>Sensation</h2>
+      <h2>Temperature</h2>
+      <img src="http://placekitten.com/50/50" alt="icon">
+
+      <ul>
+        <li>
+          <input type="text">
+        </li>
+        <li>
+          <input type="text">
+        </li><li>
+          <input type="text">
+        </li><li>
+          <input type="text">
+        </li>
+      </ul>
+
+      <button class="modal-button">change location</button>
+
+      <div class="modal-container">
+        <div class="modal-overlay modal-exit"></div>
+        <div class="modal">
+          <span class="modal-exit">&times;</span>
+          <div>
+            <h3>Location</h3>
+            <div class="input-wrapper">
+              <label for="city">City: </label>
+              <input type="text" id="city">
+            </div>
+            <div class="input-wrapper">
+              <label for="state">State: </label>
+              <input type="text" id="state">
+            </div>
+            <button class="btn">save changes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="storaje.js"></script>
+  <script src="ui.js"></script>
+  <script src="weather.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>

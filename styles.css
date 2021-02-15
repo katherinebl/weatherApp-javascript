@@ -1,0 +1,144 @@
+body {
+
+  font-family: 'Quicksand', sans-serif;
+  color: #05445E;
+}
+
+.main,
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  height: 80vh;
+  background-color: #D4F1F4;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#189AB4;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+/* Modal */
+.modal-button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #75E6DA;
+  font-size: 1.1rem;
+}
+.btn {
+  width: 130px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #75E6DA;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+.modal-button:hover,
+.btn:hover {
+  background-color: #05445E;
+  color: #75E6DA;
+  border: solid 1px #75E6DA;
+}
+
+.modal-container {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  transition: all .2s linear;
+  opacity: 0;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0 ,0, .5);
+}
+
+.modal {
+  position: relative;
+  width: 90%;
+  height: 250px;
+
+
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: 0 3px 15px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica', 'Segoe UI Light', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+span.modal-exit {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.modal-exit { cursor: pointer; }
+
+.fade-in {
+  visibility: visible !important;
+  z-index: 99;
+  opacity: 1;
+}
+
+.input-wrapper {
+  margin: 10px auto;
+  display: flex;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  width: 100%;
+}
+
+/* Mediaqueries */
+@media all and (min-width: 768px) {
+  .container {
+    width: 40%;
+    justify-content: center;
+  }
+  .modal {
+    width: 500px;
+    height: 300px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+  .btn {
+    width: 150px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+}
