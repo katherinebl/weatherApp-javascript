@@ -1,3 +1,27 @@
+class UI {
+  constructor() {
+    this.location = document.getElementById('location');
+    this.conditionText = document.getElementById('condition-text');
+    this.temperature = document.getElementById('temperature');
+    this.conditionIcon = document.getElementById('condition-icon');
+    this.currentHumidity = document.getElementById('current-humidity');
+    this.currentPrecip = document.getElementById('current-precip');
+    this.currentFeelslike = document.getElementById('current-feelslike');
+    this.currentWind = document.getElementById('current-wind');
+  }
+
+  paint(data) {
+    this.location.textContent = data.location.name;
+    this.conditionText.textContent = data.current.condition.text;
+    this.temperature.textContent = data.current.temp_c;
+    this.conditionIcon.setAttribute('src', data.current.condition.icon);
+    this.currentHumidity.textContent = `Humidity: ${data.current.humidity}`;
+    this.currentPrecip.textContent = `Precipitation: ${data.current.precip_mm}`;
+    this.currentFeelslike.textContent = `Feels like: ${data.current.feelslike_c}`;
+    this.currentWind.textContent = `Wind: ${data.current.wind_kph}`;
+  }
+}
+
 // Modal Controler
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".modal-button").addEventListener("click", function() {
