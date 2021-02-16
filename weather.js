@@ -8,7 +8,6 @@ class Weather {
   async getWeather() {
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${this.apiKey}&q=${this.city}`);
     const data = await response.json();
-    //console.log('data: ', data);
     return data;
   }
 

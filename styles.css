@@ -1,22 +1,11 @@
 body {
-
   font-family: 'Quicksand', sans-serif;
   color: #05445E;
 }
-
-.main,
-.container {
+.header {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-}
-
-.container {
-  max-width: 1024px;
-  width: 90%;
-  height: 80vh;
-  background-color: #D4F1F4;
 }
 
 h1 {
@@ -24,9 +13,44 @@ h1 {
   color:#189AB4;
 }
 
+.main,
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1024px;
+  width: 95%;
+  height: 60vh;
+  background-color: #D4F1F4;
+  border-radius: 5px;
+}
+
+h2.city {
+  font-size: 2.2rem;
+}
+h2.temperature {
+  font-size: 2.5rem;
+    margin-top: 12px;
+}
+h2 {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
 ul {
   list-style-type: none;
   padding: 10px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+img {
+  width: 80px;
+  height: auto;
 }
 
 /* Modal */
@@ -121,11 +145,38 @@ input {
   width: 100%;
 }
 
+.footer__text {
+  text-align: center;
+}
+
+.footer__text a {
+  text-decoration: none;
+}
+
 /* Mediaqueries */
+
 @media all and (min-width: 768px) {
   .container {
-    width: 40%;
-    justify-content: center;
+    width: 75%;
+    height: 52vh;
+  }
+  ul {
+    margin-bottom: 35px;
+  }
+  .modal {
+    width: 54%;
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    width: 70%;
+    height: 55vh;
+  }
+
+  .sensation {
+    margin-bottom: 1rem;
   }
   .modal {
     width: 500px;
@@ -140,5 +191,12 @@ input {
     height: 40px;
     font-size: 1.1rem;
     margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    width: 50%;
+    height: 65vh;
   }
 }

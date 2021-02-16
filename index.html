@@ -13,13 +13,16 @@
 </head>
 <body>
 
-  <main class="main">
+  <header class="header">
     <h1>WeatherJS App</h1>
+  </header>
+
+  <main class="main">
 
     <div class="container">
-      <h2 id="location"></h2>
-      <h2 id="condition-text"></h2>
-      <h2 id="temperature"></h2>
+      <h2 class="city" id="location"></h2>
+      <h2 class="sensation" id="condition-text"></h2>
+      <h2 class="temperature" id="temperature"></h2>
       <img id="condition-icon" alt="icon">
 
       <ul>
@@ -56,6 +59,14 @@
 
     </div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer__text">Hecho con <span>💙</span>
+        por © <a href="https://github.com/katherinebl" target="_blank">KatherineBL</a> 2021
+      </p>
+    </div>
+  </footer>
 
   <script src="storage.js"></script>
   <script src="ui.js"></script>
