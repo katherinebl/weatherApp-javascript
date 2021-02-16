@@ -1,2 +1,4 @@
 # weatherApp-javascript
-I'm building this weather app with vanilla JS :)
+I built this weather app with vanilla JS and CSS 
+
+✨Thank you for visiting✨
